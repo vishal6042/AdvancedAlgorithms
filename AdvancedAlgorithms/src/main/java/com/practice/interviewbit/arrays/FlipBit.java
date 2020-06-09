@@ -31,7 +31,7 @@ package com.practice.interviewbit.arrays;
  */
 public class FlipBit {
     public static void main(String[] args) {
-        int arr[] = new FlipBit().flip("01001");
+        int arr[] = new FlipBit().flip("111010"); // 111101 (1,3)
         if (arr.length == 2) {
             System.out.println(arr[0] + " " + arr[1]);
         }
@@ -61,6 +61,8 @@ public class FlipBit {
         if (!isDone) {
             return new int[0];
         }
+        ans[0] += 1;
+        ans[1] += 1;
         return ans;
     }
 }

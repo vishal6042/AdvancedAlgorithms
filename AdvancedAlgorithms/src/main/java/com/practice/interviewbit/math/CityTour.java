@@ -54,7 +54,7 @@ public class CityTour {
         if (A == 0) {
             return 0;
         }
-        int visited[] = new int[A + 1];
+        int[] visited = new int[A + 1];
         for (int i = 0; i < B.length; i++) {
             visited[B[i]] = 1;
         }

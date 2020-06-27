@@ -38,6 +38,7 @@ public class SortedPermutationRank {
         int rank = 1;
         int len = A.length();
         int fact = fact(len);
+        // System.out.println("Fact 13" + fact);
         //fact %= MOD;
 
         int count[] = new int[256];
@@ -45,9 +46,13 @@ public class SortedPermutationRank {
 
         for (int i = 0; i < len; i++) {
             fact = fact(len - i - 1);
+            // System.out.println("Fact " + fact);
             rank += ((count[A.charAt(i) - 1] % MOD) * (fact % MOD)) % MOD;
+            // rank += ((count[A.charAt(i) - 1]) * (fact));
             //rank %= MOD;
             reduceCount(count, A.charAt(i));
+            //System.out.println(rank);
+
         }
         return (rank % MOD);
     }
@@ -72,6 +77,7 @@ public class SortedPermutationRank {
         if (len <= 1) {
             return 1;
         }
+        // return  len * fact(len-1);
         return ((len % MOD) * (fact(len - 1) % MOD)) % MOD;
     }
 }

@@ -21,7 +21,7 @@ public class ImplementPowerFunctions {
 
     public static void main(String[] args) {
         ImplementPowerFunctions power = new ImplementPowerFunctions();
-        System.out.println(power.pow(-1, 1, 20));
+        System.out.println(power.pow(-2, 3, 3));
     }
 
     public int pow(int x, int n, int d) {

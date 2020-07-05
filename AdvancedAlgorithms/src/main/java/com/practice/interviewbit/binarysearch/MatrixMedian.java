@@ -46,8 +46,10 @@ public class MatrixMedian {
 
     public static void main(String[] args) {
         MatrixMedian mm = new MatrixMedian();
-        int ans = mm.findMedian(new int[][]{{1, 3, 5}, {2, 6, 9}, {3, 6, 9}});
+//        int ans = mm.findMedian(new int[][]{{1, 3, 5}, {2, 6, 9}, {3, 6, 9}});
+        int ans = mm.findMedian(new int[][]{{1, 1, 3, 3, 3, 3, 3}});
         System.out.println(ans);
+        System.out.println(mm.find(new int[]{2, 3, 5}, 1));
     }
 
     public int findMedian(int[][] A) {
@@ -72,7 +74,6 @@ public class MatrixMedian {
             int index = 0;
             for (int[] ints : A) {
                 index = find(ints, mid);
-
                 if (index < 0) {
                     index = Math.abs(index) - 1;
                 } else {

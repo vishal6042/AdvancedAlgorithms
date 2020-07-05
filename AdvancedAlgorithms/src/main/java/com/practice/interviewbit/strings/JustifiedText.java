@@ -59,20 +59,20 @@ public class JustifiedText {
         StringBuilder ans = new StringBuilder();
         String lines[] = line.split(" ");
         if (lines.length == 1) {
-            String word = lines[0];
+            StringBuilder word = new StringBuilder(lines[0]);
             for (int j = 0; j < distributed; j++) {
-                word += " ";
+                word.append(" ");
             }
             ans.append(word);
             return ans.toString();
         }
         for (int i = 0; i < lines.length - 1; i++) {
-            String word = lines[i];
+            StringBuilder word = new StringBuilder(lines[i]);
             for (int j = 0; j < distributed; j++) {
-                word += " ";
+                word.append(" ");
             }
             if (remainder != 0) {
-                word += " ";
+                word.append(" ");
                 remainder--;
             }
             ans.append(word);

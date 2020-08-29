@@ -10,7 +10,7 @@ public class MultiplyTwoStrings {
         int n1 = a.length;
         int n2 = b.length;
 
-        char result[] = new char[n1 + n2];
+        char[] result = new char[n1 + n2];
         Arrays.fill(result, '0');
 
         for (int j = n2 - 1; j >= 0; j--) {

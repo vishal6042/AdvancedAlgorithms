@@ -13,8 +13,9 @@ public class PrimeFactor {
         }
 
         for (int a : arr) {
-            System.out.println("Factor of " + a + " :");
+            System.out.print("Factor of " + a + " :");
             primeFactor(a);
+            System.out.println();
         }
         sc.close();
 
@@ -22,18 +23,18 @@ public class PrimeFactor {
 
     private static void primeFactor(int number) {
         while (number % 2 == 0) {
-            System.out.println(2);
+            System.out.print(2 + " ");
             number /= 2;
         }
         // odd number
         for (int i = 3; i <= Math.sqrt(number); i += 2) {
             while (number % i == 0) {
-                System.out.println(i);
+                System.out.print(i + " ");
                 number = number / i;
             }
         }
         if (number > 2) {
-            System.out.println(number);
+            System.out.print(number + " ");
         }
     }
 
